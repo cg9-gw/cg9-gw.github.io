@@ -1,11 +1,11 @@
-#testtext {
+.testtext {
     color: brown;
     font-family: impact;
     font-size: 15px;
     font-stretch: wider;
 }
 .sidebar {
-    margin: auto;
+    margin-left: auto;
     width:150px;
     padding-right: 10px;
 }
