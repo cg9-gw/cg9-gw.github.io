@@ -5,7 +5,7 @@
     font-stretch: wider;
 }
 .sidebar {
-    margin-right: auto;
+    margin: left 10px;;
     width:150px;
     padding-right: 10px;
 }
