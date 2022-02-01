@@ -4,3 +4,8 @@
     font-size: 15px;
     font-stretch: wider;
 }
+.sidebar {
+    margin-left: auto;
+    width:20%;
+    padding-right: 10px;
+}
