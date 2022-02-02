@@ -20,7 +20,7 @@
                 if(sbutton.value!="validtoken") {
                     var invalidtext = document.createElement("p")
                     invalidtext.innerText = "Invalid token provided."
-                    //invalidtext.style = "color: deepred"
+                    invalidtext.style = "color: deepred; font-family: monospace"
                     sbutton.parentElement.appendChild(invalidtext)
                 }
             }
