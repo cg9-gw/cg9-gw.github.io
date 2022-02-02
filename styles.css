@@ -21,10 +21,8 @@
     padding-top:20px;
 }
 .main-content {
+    background-color: gainsboro;
     margin: center 5px;
     width:fit-content;
     padding: 30px;
-}
-#token-form {
-    background-color:gainsboro
 }
