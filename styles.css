@@ -5,7 +5,7 @@
     font-stretch: wider;
 }
 .sidebar {
-    margin: left 10px;;
+    margin: left 10px;
     width:150px;
     padding-right: 10px;
 }
@@ -19,4 +19,12 @@
     font-size:medium;
     font-family: impact;
     padding-top:20px;
+}
+.main-content {
+    margin: center 5px;
+    width:fit-content;
+    padding: 30px;
+}
+#token-form {
+    background-color:gainsboro
 }
