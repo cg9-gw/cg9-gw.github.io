@@ -30,3 +30,8 @@
     color:darkorchid;
     font-family: impact
 }
+#travel {
+    position:absolute;
+    right:0;
+    top: 10%
+}

@@ -25,6 +25,20 @@
                 }
             }
         </script>
+        <script type="text/javascript">
+            function addlink() {
+                var url = document.getElementById("addlink").value
+                var name = document.getElementById("addname").value
+                var ahl = document.getElementById("addhlinkhere");
+                var newlink = document.createElement("li")
+                var newa = document.createElement("a")
+                newa.href = url;
+                newa.target = "_blank";
+                newa.innerText = name;
+                newlink.appendChild(newa)
+                ahl.appendChild(newlink)
+            }
+        </script>
         <div>
             <p class="testtext">my webside</p>
         </div>
@@ -43,12 +57,25 @@
             <div class="main-content-left">
                 <div>
                     <label for="token">Provide valid token to continue</label>
-                    <input type="password" id="token" required>
+                    <input type="password" id="token">
                 </div>
                 <div id="tokenform-bottom">
                     <input id="submitbutton" type="button" onclick="submit()" value="submit" id="tokensubmitbutton">
                 </div> 
             </div>
+        </div>
+        <div id="travel">
+            <div>
+                <p class="testtext">Add a hyperlink</p>
+                <input type="text" id="addlink" value="Enter url here">
+                <input type="text" id="addname" value="Enter name here">
+                <input type="button" id="addhlbutton" value="Create hyperlink button" onclick="addlink()">
+            </div>
+            <nav id="navtravel">
+                <ul id="addhlinkhere">
+                    
+                </ul>
+            </nav>
         </div>
 
     </body>
