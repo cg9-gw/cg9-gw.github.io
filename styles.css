@@ -26,6 +26,9 @@
     width:fit-content;
     padding: 30px;
 }
+.main-body {
+    background-color:dodgerblue
+}
 #submitbutton {
     color:darkorchid;
     font-family: impact

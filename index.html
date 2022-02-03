@@ -4,7 +4,7 @@
         <!-- add external stylesheet styles.css-->
         <link rel="stylesheet" href="styles.css">
     </head>
-    <body>
+    <body class="main-body">
         <script>
             function crash() {
                 var t = "lol";
@@ -22,7 +22,7 @@
                     invalidtext.innerText = "Invalid token provided."
                     invalidtext.style = "color: crimson; font-family: monospace"
                     sbutton.parentElement.appendChild(invalidtext)
-                } else {
+                } else if(sbutton.value==="validtext") {
                     invalidtext.remove()
                     var validtext = document.createElement("p")
                     validtext.innerText = "A valid token has been provided. Prepare for trollage"
