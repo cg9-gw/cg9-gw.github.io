@@ -32,12 +32,19 @@
                 var ahl = document.getElementById("addhlinkhere");
                 var newlink = document.createElement("li")
                 var newa = document.createElement("a")
+                var nrbtn = document.createElement("input")
+                nrbtn.type="button"
+                nrbtn.value="remove hyperlink"
+                nrbtn.onclick = function() {
+                    newlink.remove()
+                }
                 newa.href = url;
                 newa.target = "_blank";
                 newa.innerText = name;
                 newlink.appendChild(newa)
                 ahl.appendChild(newlink)
             }
+            
         </script>
         <div>
             <p class="testtext">my webside</p>
