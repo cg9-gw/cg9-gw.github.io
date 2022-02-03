@@ -20,8 +20,21 @@
                 if(sbutton.value!="validtoken") {
                     var invalidtext = document.createElement("p")
                     invalidtext.innerText = "Invalid token provided."
-                    invalidtext.style = "color: deepred; font-family: monospace"
+                    invalidtext.style = "color: crimson; font-family: monospace"
                     sbutton.parentElement.appendChild(invalidtext)
+                } else {
+                    invalidtext.remove()
+                    var validtext = document.createElement("p")
+                    validtext.innerText = "A valid token has been provided. Prepare for trollage"
+                    validtext.style = "color:green; font-family: monospace"
+                    sbutton.parentElement.appendChild(validtext)
+                    for(let i=0;i<100;i++) {
+                        let img=document.createElement("img")
+                        img.src="the w.jpeg"
+                        img.style="position: relative;width: 25px; height: 25px; top: "+Math.floor(Math.random()*100)+"% left: "+Math.floor(Math.random()*100)+"%"
+                        
+                        
+                    }
                 }
             }
         </script>
