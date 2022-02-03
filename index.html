@@ -38,7 +38,8 @@
                 nrbtn.onclick = function() {
                     newlink.remove()
                 }
-                newa.href = url;
+                
+                newa.href = url.slice(0,3)==="http" ? url : "https://"+url;
                 newa.target = "_blank";
                 newa.innerText = name;
                 newlink.appendChild(newa)
