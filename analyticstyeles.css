@@ -11,8 +11,8 @@
     background-color:white
 }
 body {
-    height:fit-content;
-    width:fit-content;
+    height:100%;
+    width:100%;
     background-color: darkgray;
     background-image:url("logo.png")
 }
