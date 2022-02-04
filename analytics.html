@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="analyticstyeles.css">
         <title>baseball stats (beta)</title>
     </head>
-    <body onload="requestData()"> 
+    <body onload="populateTable()"> 
         <script type="text/javascript">
             function populateTable() {
                 for(let i=1;i<=10;i++) {
@@ -52,9 +52,9 @@
             }
             function requestData() {
                 fetch("https://api.team-manager.gc.com/teams/572dceca-e01d-49a6-9145-749223131de6/players", {
+                method: "GET",
                 mode: "cors",
                 "headers": {
-                    "accept": "application/vnd.gc.com.player:list+json; version=0.1.0",
                     "content-type": "application/json",
                     "gc-client-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRJZCI6ImYwZDJiOTY2LTNiYWYtNDIyOS04ZmJhLTI5ODZlYzRkYzYwOCIsIm5vbmNlIjoxNjQzOTQ0Nzg3MDEzLCJqdGkiOiI2MGNkNmYyNC03YzMzLTRiZWItYTYyYi1lYTc5ODJlMDg4MzAiLCJpYXQiOjE2NDM5NDQ3ODd9.eMnobsRfkihNww0QmI6DQXIKfQ5QI2XgMnRZpXKsqb4",
                     "gc-user-action": "data_loading:team_stats",
