@@ -2,15 +2,17 @@
 <html>
     <head>
         <link rel="stylesheet" href="analyticstyeles.css">
-        <title>baseball stats!</title>
+        <title>baseball stats (beta)</title>
     </head>
     <body onload="populateTable"> 
         <script type="text/javascript">
             function populateTable() {
                 var dummyStats = document.createElement("tr")
-                var tdtemplate = document.createElement("td")
+                tdtemplate.className = "default-data"
                 for(let i=1;i<10;i++) {
                     for(let j=1;j<8;j++) {
+                        let tdtemplate = document.createElement("td")
+                        tdtemplate.className = "default-data"
                         switch(j) {
                             case 1:
                             tdtemplate.innerText = "random name"+i.toString()
@@ -54,13 +56,13 @@
             <table id="stattable">
                 <tr id="headerrow">
                     <th class = "header-player">Player</th>
-                    <th>BA</th>
-                    <th>H</th>
-                    <th>1B</th>
-                    <th>2B</th>
-                    <th>3B</th>
-                    <th>HR</th>
-                    <th>BB</th>
+                    <th class = "default-header">BA</th>
+                    <th class = "default-header">H</th>
+                    <th class = "default-header">1B</th>
+                    <th class = "default-header">2B</th>
+                    <th class = "default-header">3B</th>
+                    <th class = "default-header">HR</th>
+                    <th class = "default-header">BB</th>
                 </tr>
             </table>
         </div>
