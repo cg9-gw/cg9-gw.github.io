@@ -14,7 +14,8 @@ body {
     height:fit-content;
     width:fit-content;
     background-color: darkgray;
-    background-image:url("logo.png")
+    background-image:url("logo.png");
+    background-size:100%;
 }
 #headerrow {
     background-color: lightgray
