@@ -7,7 +7,6 @@
 }
 .header-player {
     font-family: monospace;
-    font-size: 2%;
     color: maroon;
     background-color:white
 }
@@ -22,7 +21,13 @@ body {
 }
 .default-header {
     width: 12.5%;
+    font-family:monospace;
+    color: black;
+    background-color: lightgray
 }
 .default-data {
     width: 12.5%;
+    font-family:monospace;
+    color:black;
+    background-color:lightgray
 }
