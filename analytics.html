@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="analyticstyeles.css">
         <title>baseball stats (beta)</title>
     </head>
-    <body onload="populateTable"> 
+    <body onload="populateTable()"> 
         <script type="text/javascript">
             function populateTable() {
                 var dummyStats = document.createElement("tr")
@@ -52,7 +52,7 @@
                 }
             }
         </script>
-        <div id="mainstats" style="background-color: black">
+        <div id="mainstats">
             <table id="stattable">
                 <tr id="headerrow">
                     <th class = "header-player">Player</th>
@@ -65,6 +65,7 @@
                     <th class = "default-header">BB</th>
                 </tr>
             </table>
+            <input type="button" onclick="populateTable()" value="Load dummy stats">
         </div>
     </body>
 </html>

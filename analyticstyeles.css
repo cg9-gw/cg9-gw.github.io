@@ -3,6 +3,7 @@
     top: 50%;
     left: 50%;
     width:70%;
+    background-color:black;
 }
 .header-player {
     font-family: monospace;
@@ -13,7 +14,7 @@
 body {
     height:100%;
     background-color: darkgray;
-    background-image: "logo.png";
+    background-image:url("logo.png")
 }
 #headerrow {
     background-color: lightgray
