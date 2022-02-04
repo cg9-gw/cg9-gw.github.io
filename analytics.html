@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="analyticstyeles.css">
+        <title>baseball stats!</title>
+    </head>
+    <body onload="populateTable"> 
+        <script type="text/javascript">
+            function populateTable() {
+                var dummyStats = document.createElement("tr")
+                var tdtemplate = document.createElement("td")
+                for(let i=1;i<10;i++) {
+                    for(let j=1;j<8;j++) {
+                        switch(j) {
+                            case 1:
+                            tdtemplate.innerText = "random name"+i.toString()
+                            dummyStats.appendChild(tdtemplate)
+                            break;
+                            case 2:
+                            tdtemplate.innerText = "BA"+i.toString()
+                            dummyStats.appendChild(tdtemplate)
+                            break;
+                            case 3: 
+                            tdtemplate.innerText = "H"+i.toString()
+                            dummyStats.appendChild(tdtemplate)
+                            break;
+                            case 4: 
+                            tdtemplate.innerText = "1B"+i.toString()
+                            dummyStats.appendChild(tdtemplate)
+                            break;
+                            case 5: 
+                            tdtemplate.innerText = "2B"+i.toString()
+                            dummyStats.appendChild(tdtemplate)
+                            break;
+                            case 6:
+                            tdtemplate.innerText = "3B"+i.toString()
+                            dummyStats.appendChild(tdtemplate)
+                            break;
+                            case 7: 
+                            tdtemplate.innerText = "HR"+i.toString()
+                            dummyStats.appendChild(tdtemplate)
+                            break;
+                            case 8:
+                            tdtemplate.innerText = "BB"+i.toString()
+                            dummyStats.appendChild(tdtemplate)
+                            break;
+                        }
+                    }
+                    document.getElementById("stattable").appendChild(dummyStats)
+                }
+            }
+        </script>
+        <div id="mainstats" style="background-color: black">
+            <table id="stattable">
+                <tr id="headerrow">
+                    <th class = "header-player">Player</th>
+                    <th>BA</th>
+                    <th>H</th>
+                    <th>1B</th>
+                    <th>2B</th>
+                    <th>3B</th>
+                    <th>HR</th>
+                    <th>BB</th>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

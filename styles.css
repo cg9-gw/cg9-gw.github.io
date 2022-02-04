@@ -29,6 +29,12 @@
 .main-body {
     background-color:dodgerblue
 }
+.otherpages {
+    margin:auto;
+    width:30%;
+    border: 5px solid whitesmoke;
+    padding: 10px
+}
 #submitbutton {
     color:darkorchid;
     font-family: impact
