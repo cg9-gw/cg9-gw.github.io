@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="analyticstyeles.css">
         <title>baseball stats (beta)</title>
     </head>
-    <body onload="populateTable()"> 
+    <body onload="requestData()"> 
         <script type="text/javascript">
             function populateTable() {
                 for(let i=1;i<=10;i++) {
@@ -49,6 +49,32 @@
                     }
                     document.getElementById("stattable").appendChild(dummyStats)
                 }
+            }
+            function requestData() {
+                fetch("https://api.team-manager.gc.com/teams/572dceca-e01d-49a6-9145-749223131de6/players", {
+                "headers": {
+                    "accept": "application/vnd.gc.com.player:list+json; version=0.1.0",
+                    "content-type": "application/vnd.gc.com.none+json; version=undefined",
+                    "gc-client-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRJZCI6ImYwZDJiOTY2LTNiYWYtNDIyOS04ZmJhLTI5ODZlYzRkYzYwOCIsIm5vbmNlIjoxNjQzOTQ0Nzg3MDEzLCJqdGkiOiI2MGNkNmYyNC03YzMzLTRiZWItYTYyYi1lYTc5ODJlMDg4MzAiLCJpYXQiOjE2NDM5NDQ3ODd9.eMnobsRfkihNww0QmI6DQXIKfQ5QI2XgMnRZpXKsqb4",
+                    "gc-user-action": "data_loading:team_stats",
+                    "gc-user-action-id": "20169fed-6050-4dbb-9354-6a220933c17e",
+                    "gc-user-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3NjNmNGMwMS04NDM5LTQ5M2EtOTMzOS02ZWY5M2EwMGFjZDEiLCJlbWFpbCI6InRoZXJlYWxoYXBweWdpbG1vcmVAZ21haWwuY29tIiwibm9uY2UiOjE2NDM5NDQ4MjQzMjIuNzcxNSwiaWF0IjoxNjQzOTQ0ODI0fQ.7pASqFVoreHv5dzP7ZqE5k0V3wj8Q-Z8d0LOCzZhKj4",
+                    "sec-ch-ua": "\"Chromium\";v=\"92\", \" Not A;Brand\";v=\"99\", \"Google Chrome\";v=\"92\"",
+                    "sec-ch-ua-mobile": "?0"
+                },
+                "referrer": "https://web.gc.com/",
+                "referrerPolicy": "strict-origin-when-cross-origin",
+                "body": null,
+                "method": "GET",
+                "mode": "cors",
+                "credentials": "omit"
+                })
+                .then(response => {
+                    response.json()
+                    .then(data => {
+                        console.log(data)
+                    })
+                })
             }
         </script>
         <div id="mainstats">
