@@ -6,7 +6,7 @@
     </head>
     <body onload="populateTable()"> 
         <script type="text/javascript">
-            function populateTable() {
+            $(function populateTable() {
                 $.getJSON('tstats.json', function(data) {
                         var dp = JSON.parse(data)
                 })
@@ -21,16 +21,7 @@
                     }
                     document.getElementById("stattable").appendChild(dummyStats)
                 }
-            }
-            function populateData() {
-                $.getJSON('tstats.json', function(data) {
-                    var dp = JSON.parse(data)
-                    dp.players.forEach(player => {
-
-                    })
-                })
-                .fail(function(jqxhr, status, error) { alert(status + ", " + error);})
-            }
+            })
         </script>
         <div id="mainstats">
             <table id="stattable">
