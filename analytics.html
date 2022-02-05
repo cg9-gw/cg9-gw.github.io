@@ -11,8 +11,13 @@
                 .then(json => {
                 var dp = json
                 for(let i=0;i<dp.players.length;i++) {
+                for (const [key1,value1] of Object.entries(dp.players))
                     var dummyStats = document.createElement("tr")
-                    for (const [key,value] of Object.entries(dp.players)) {
+                    var tdtemplate = document.createElement("td")
+                    tdtemplate.setAttribute("class","header-player")
+                    tdtemplate.innerText = key1
+                    dummyStats.appendChild(tdtemplate)
+                    for (const [key,value] of Object.entries(value1)) {
                         var tdtemplate = document.createElement("td")
                         tdtemplate.setAttribute("class","default-data")
                         tdtemplate.innerText = value
