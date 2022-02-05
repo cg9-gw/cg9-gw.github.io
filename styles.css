@@ -3,6 +3,7 @@
     font-family: impact;
     font-size: 15px;
     font-stretch: wider;
+    animation: scale 0.1s infinite
 }
 .sidebar {
     margin: left 10px;
@@ -20,6 +21,14 @@
     }
     to {
         transform:rotate(360deg);
+    }
+}
+@keyframes scale {
+    from {
+        text-indent: 10px;
+    }
+    to {
+        text-indent: 15px;
     }
 }
 #crashbutton {
