@@ -11,9 +11,7 @@
     background-color:white
 }
 body {
-    display:flex;
-    width:fit-content;
-    height:min-content;
+    background-size: cover;
     background-color: darkgray;
     background-image:url("assets/logo.png");
 }
