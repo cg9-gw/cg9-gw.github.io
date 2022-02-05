@@ -9,7 +9,8 @@
             function populateTable() {
                 fetch('tstats.json')
                 .then(json => {
-                var dp = json
+                var dp = json;
+                console.log(dp)
                 for (const [key1,value1] of Object.entries(dp.players)) {
                     var dummyStats = document.createElement("tr")
                     var tdtemplate = document.createElement("td")
