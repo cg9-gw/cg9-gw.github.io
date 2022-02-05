@@ -7,12 +7,15 @@
     <body onload="populateTable()"> 
         <script type="text/javascript">
             function populateTable() {
-                const response = await fetch('tstats.json', {
+                fetch('tstats.json', {
                 headers: {
                     'Accept': 'application/json'
                 }
-                });
-                var dp = await response.json();
+                })
+                // :xok:
+                .then(response => {
+                response.json()
+                .then(dp => {
                 console.log(dp)
                 for (const [key1,value1] of Object.entries(dp.players)) {
                     var dummyStats = document.createElement("tr")
@@ -28,6 +31,8 @@
                     }
                     document.getElementById("stattable").appendChild(dummyStats)
                 }
+                })
+                })
                 
             }
         </script>
