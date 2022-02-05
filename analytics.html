@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="analyticstyeles.css">
         <title>baseball stats (beta)</title>
     </head>
-    <body onload="populateTable()"> 
+    <body onload="requestData()"> 
         <script type="text/javascript">
             function populateTable() {
                 for(let i=1;i<=10;i++) {
@@ -55,6 +55,7 @@
                 method: "GET",
                 mode: "cors",
                 "headers": {
+                    "Acess-Control-Allow-Origin": "*",
                     "content-type": "application/json",
                     "gc-client-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRJZCI6ImYwZDJiOTY2LTNiYWYtNDIyOS04ZmJhLTI5ODZlYzRkYzYwOCIsIm5vbmNlIjoxNjQzOTQ0Nzg3MDEzLCJqdGkiOiI2MGNkNmYyNC03YzMzLTRiZWItYTYyYi1lYTc5ODJlMDg4MzAiLCJpYXQiOjE2NDM5NDQ3ODd9.eMnobsRfkihNww0QmI6DQXIKfQ5QI2XgMnRZpXKsqb4",
                     "gc-user-action": "data_loading:team_stats",
