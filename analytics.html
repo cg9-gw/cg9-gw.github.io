@@ -9,7 +9,7 @@
             function populateTable() {
                 fetch('tstats.json')
                 .then(json => {
-                var dp = json
+                var dp = JSON.parse(json, function(key,value) {
                 for(let i=0;i<Object.keys(dp.players).length;i++) {
                     var dummyStats = document.createElement("tr")
                     for (const [key,value] of Object.entries(dp.players)) {
@@ -20,6 +20,7 @@
                     }
                     document.getElementById("stattable").appendChild(dummyStats)
                 }
+                })
                 })
             }
         </script>
