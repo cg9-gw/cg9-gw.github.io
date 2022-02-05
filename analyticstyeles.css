@@ -12,8 +12,8 @@
 }
 body {
     display:flex;
-    height:100%;
-    width:100%;
+    width:fit-content;
+    height:min-content;
     background-color: darkgray;
     background-image:url("assets/logo.png");
 }
