@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="analyticstyeles.css">
+        <title>baseball stats (beta)</title>
+        <meta charset="utf-8">
+    </head>
+    <body onload="populateTable()"> 
+        <script type="text/javascript">
+            function populateTable() {
+                fetch('stats/pitching.json', {
+                headers: {
+                    'Accept': 'application/json'
+                }
+                })
+                // :xok:
+                .then(response => {
+                response.json()
+                .then(dp => {
+                console.log(dp)
+                for (const [key1,value1] of Object.entries(dp.players)) {
+                    var dummyStats = document.createElement("tr")
+                    var tdtemplate = document.createElement("td")
+                    tdtemplate.setAttribute("class","header-player")
+                    tdtemplate.innerText = key1
+                    dummyStats.appendChild(tdtemplate)
+                    for (const [key,value] of Object.entries(value1)) {
+                        var tdtemplate = document.createElement("td")
+                        tdtemplate.setAttribute("class","default-data")
+                        tdtemplate.innerText = value
+                        dummyStats.appendChild(tdtemplate)
+                    }
+                    document.getElementById("Pstattable").appendChild(dummyStats)
+                }
+                })
+                })
+                
+            }
+        </script>
+        <div id="nav">
+            <a class="statswap" href="defense.html">defense</a>
+            <a class="statswap" href="offense.html">offense</a>
+        </div>
+        <div id="pmainstats">
+            <table id="Pstattable">
+                <tr id="headerrow">
+                    <th class = "header-player">Player</th>
+                    <th class = "default-header">ERA</th>
+                    <th class = "default-header">IP</th>
+                    <th class = "default-header">GP</th>
+                    <th class = "default-header">GS</th>
+                    <th class = "default-header">BF</th>
+                    <th class = "default-header">#P</th>
+                    <th class = "default-header">W</th>
+                    <th class = "default-header">L</th>
+                    <th class = "default-header">SV</th>
+                    <th class = "default-header">BS</th>
+                    <th class = "default-header">H</th>
+                    <th class = "default-header">R</th>
+                    <th class = "default-header">ER</th>
+                    <th class = "default-header">BB</th>
+                    <th class = "default-header">SO</th>
+                    <th class = "default-header">HBP</th>
+                    <th class = "default-header">WHIP</th>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

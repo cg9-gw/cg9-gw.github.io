@@ -3,11 +3,12 @@
     <head>
         <link rel="stylesheet" href="analyticstyeles.css">
         <title>baseball stats (beta)</title>
+        <meta charset="utf-8">
     </head>
     <body onload="populateTable()"> 
         <script type="text/javascript">
             function populateTable() {
-                fetch('tstats.json', {
+                fetch('stats/defense.json', {
                 headers: {
                     'Accept': 'application/json'
                 }
@@ -36,17 +37,21 @@
                 
             }
         </script>
+        <div id="nav">
+            <a class="statswap" href="offense.html">offense</a>
+            <a class="statswap" href="pitching.html">pitching</a>
+        </div>
         <div id="mainstats">
             <table id="stattable">
                 <tr id="headerrow">
                     <th class = "header-player">Player</th>
-                    <th class = "default-header">AVG</th>
-                    <th class = "default-header">H</th>
-                    <th class = "default-header">1B</th>
-                    <th class = "default-header">2B</th>
-                    <th class = "default-header">3B</th>
-                    <th class = "default-header">HR</th>
-                    <th class = "default-header">BB</th>
+                    <th class = "default-header">FPCT</th>
+                    <th class = "default-header">TC</th>
+                    <th class = "default-header">A</th>
+                    <th class = "default-header">PO</th>
+                    <th class = "default-header">E</th>
+                    <th class = "default-header">DP</th>
+                    <th class = "default-header">TP</th>
                 </tr>
             </table>
         </div>

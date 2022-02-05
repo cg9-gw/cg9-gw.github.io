@@ -5,6 +5,33 @@
     width:70%;
     background-color:black;
 }
+#pmainstats {
+    position:absolute;
+    top: 30%;
+    left: 5%;
+    width:90%;
+    background-color:black;
+}
+.statswap {
+    color: maroon;
+    text-align:center;
+    padding:5px 6px;
+    float: left;
+    outline: 2px solid black;
+    text-decoration: solid;
+}
+.statswap:hover {
+    background-color: gray;
+    text-decoration: underline;
+}
+#nav {
+    position:absolute;
+    top:20%;
+    left:15%;
+    width:auto;
+    background-color: white;
+    
+}
 .header-player {
     font-family: monospace;
     color: maroon;
@@ -25,8 +52,9 @@ body {
     background-color: lightgray
 }
 .default-data {
-    width: 12.5%;
+    width:fit-content;
     font-family:monospace;
     color:black;
-    background-color:lightgray
+    background-color:lightgray;
+    text-align:center;
 }

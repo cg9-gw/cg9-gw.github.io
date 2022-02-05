@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="analyticstyeles.css">
+        <title>baseball stats (beta)</title>
+        <meta charset="utf-8">
+    </head>
+    <body onload="populateTable()"> 
+        <script type="text/javascript">
+            function populateTable() {
+                fetch('stats/offense.json', {
+                headers: {
+                    'Accept': 'application/json'
+                }
+                })
+                // :xok:
+                .then(response => {
+                response.json()
+                .then(dp => {
+                console.log(dp)
+                for (const [key1,value1] of Object.entries(dp.players)) {
+                    var dummyStats = document.createElement("tr")
+                    var tdtemplate = document.createElement("td")
+                    tdtemplate.setAttribute("class","header-player")
+                    tdtemplate.innerText = key1
+                    dummyStats.appendChild(tdtemplate)
+                    for (const [key,value] of Object.entries(value1)) {
+                        var tdtemplate = document.createElement("td")
+                        tdtemplate.setAttribute("class","default-data")
+                        tdtemplate.innerText = value
+                        dummyStats.appendChild(tdtemplate)
+                    }
+                    document.getElementById("stattable").appendChild(dummyStats)
+                }
+                })
+                })
+                
+            }
+        </script>
+        <div id="nav">
+                <a class="statswap" href="defense.html">defense</a>
+                <a class="statswap" href="pitching.html">pitching</a>
+        </div>
+        <div id="mainstats">
+            <table id="stattable">
+                <tr id="headerrow">
+                    <th class = "header-player">Player</th>
+                    <th class = "default-header">AVG</th>
+                    <th class = "default-header">H</th>
+                    <th class = "default-header">1B</th>
+                    <th class = "default-header">2B</th>
+                    <th class = "default-header">3B</th>
+                    <th class = "default-header">HR</th>
+                    <th class = "default-header">BB</th>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
