@@ -1,0 +1,22 @@
+#sidebar {
+    background-color:gray;
+    width: 20%;
+    height:100%;
+    position:absolute;
+    padding-right:5px;
+}
+.navlink {
+    padding-left:10px;
+    padding-top: 10px;
+    color:crimson
+}
+#main-content {
+    background-color:rgb(72, 64, 100);
+    width:60%;
+    height:100%;
+    position:absolute;
+    left:25%;
+}
+body {
+    background-image: radial-gradient(black,crimson,red)
+}
