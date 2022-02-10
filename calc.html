@@ -2,14 +2,55 @@
 <html>
     <head>
         <link href="calcstyle.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.1.1/math.js"></script>
+        <script src="nerdamer.core.js"></script> 
+        <script src="Algebra.js"></script>
+        <script src="Calculus.js"></script>
+        <script src="Solve.js"></script>
+        <script src="Extra.js"></script>
     </head>
     <body>
+        
+        <script type="text/javascript">
+            function Reset() {
+                window.location.reload();
+                return false;
+            }
+            function readEx() {
+                //gross
+                var ne = document.createElement("p")
+                var ebval = document.getElementById("equation-box").value
+                ne.className="answer"
+                ne.id="answertext"
+                ne.innerText = nerdamer(ebval).toString()
+
+                document.getElementById("answer-space").appendChild(ne)
+                document.getElementById("go").remove()
+                var btn = document.createElement("input")
+                btn.type="button"
+                btn.value="Reset"
+                btn.id="reset"
+                btn.style="position:relative;left:15%;height:20px"
+                btn.onclick=function() {window.location.reload(); return false}
+                document.getElementById("answer-space").appendChild(btn)
+            }
+            var g = document.getElementById("equation-box")
+            document.addEventListener('keydown',function(e) {
+                if(e.key==="Enter"&document.getElementById("equation-box").value!="") {
+                    document.getElementById("go").click()
+                }
+            })
+        </script>
         <div id="sidebar">
-            <li><a class="navlink" href="#">link</a></li>
-            <li><a class="navlink" href="3">link2</a></li>        
+                  
         </div>
         <div id="main-content">
-            
+            <h1 style="position:relative;left:30%;color:azure">gCalc</h1>
+            <input type="text" id="equation-box" placeholder="enter equation here">
+            <input id="go" type="button" onclick="readEx()" value="Go">
+            <div id="answer-space">
+
+            </div>
         </div>
     </body>
 </html>
