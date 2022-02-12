@@ -15,10 +15,9 @@ var pointLight = new THREE.PointLight( 0xffffff, 1 );
 pointLight.position.set( 25, 5, 15 );
 scene.add( pointLight );
 var g2 = new THREE.TorusGeometry(3,0.5,16,100)
-var m2 = new THREE.MeshStandardMaterial({ color: 0xd500bb, wireframe:true,transparent: true})
+var m2 = new THREE.MeshStandardMaterial({ color: 0xd500bb})
 var torus = new THREE.Mesh( g2, m2)
 scene.add(torus)
-
 
 
 
